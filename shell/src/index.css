@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.bg-kpto {
+   background-color: red !important;
+}
