@@ -12,7 +12,7 @@ class Component extends WebComponentBase<RouterProps> {
     {
       name: "baseUrl",
       type: "string",
-      required: true,
+      required: false,
       defaultValue: "",
     },
   ];

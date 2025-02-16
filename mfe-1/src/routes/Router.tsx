@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutUs, Documentation } from "~/pages";
 import { RouterProps } from "./types";
 
 export function Router(props: RouterProps) {
   const { baseUrl = "" } = props;
+  console.log(props);
 
   const routes = [
     { path: "documentacao", element: <Documentation /> },

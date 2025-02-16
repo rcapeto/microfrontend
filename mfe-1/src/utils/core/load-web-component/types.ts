@@ -1,5 +1,5 @@
 import { FunctionComponent, ReactNode } from "react";
-import { ScriptType } from "~/utils";
+import { ScriptType } from "~/utils/secondary";
 
 export type LoadWebComponentConfig = {
   tagName: string;

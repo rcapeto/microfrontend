@@ -1,26 +1,6 @@
 import { GetComponentPropsParams, PropSchema, PropSchemaType } from "./types";
 
-export function getComponentPropValue<Props>(
-  value: string,
-  schema: PropSchema<Props>
-) {
-  const transformers: Record<PropSchemaType, (value: string) => unknown> = {
-    array: arrayParser,
-    boolean: Boolean,
-    number: Number,
-    object: objectParser,
-    string: String,
-  };
-  const transformer = transformers[schema.type] || String;
-
-  if (schema.required) {
-    return transformer(value) ?? schema.defaultValue;
-  }
-
-  return transformer(value);
-}
-
-export function getComponentProps<Props extends object>(
+export function getComponentPropsByAttributes<Props extends object>(
   params: GetComponentPropsParams<Props>
 ) {
   const props = {} as Props;
@@ -38,6 +18,26 @@ export function getComponentProps<Props extends object>(
   }
 
   return props;
+}
+
+function getComponentPropValue<Props>(
+  value: string,
+  schema: PropSchema<Props>
+) {
+  const transformers: Record<PropSchemaType, (value: string) => unknown> = {
+    array: arrayParser,
+    boolean: Boolean,
+    number: Number,
+    object: objectParser,
+    string: String,
+  };
+  const transformer = transformers[schema.type] || String;
+
+  if (schema.required) {
+    return transformer(value) ?? schema.defaultValue;
+  }
+
+  return transformer(value);
 }
 
 function objectParser(objectStr: string) {

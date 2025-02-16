@@ -1,4 +1,4 @@
-export function transformPropsToAttribute(props: object) {
+export function transformPropsToAttributes(props: object) {
   return Object.entries(props)
     .map(([key, value]) => ({
       [key]:

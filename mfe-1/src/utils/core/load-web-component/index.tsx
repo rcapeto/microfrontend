@@ -1,9 +1,9 @@
 import { createElement, FunctionComponent, useEffect, useState } from "react";
 import {
   loadScript,
-  transformPropsToAttribute,
+  transformPropsToAttributes,
   waitCustomElementInPage,
-} from "~/utils";
+} from "~/utils/secondary";
 import { LoadWebComponentConfig } from "./types";
 
 export function loadWebComponent<ComponentProps extends object>({
@@ -60,7 +60,7 @@ export function loadWebComponent<ComponentProps extends object>({
       return errorElement || null;
     }
 
-    const newProps = transformPropsToAttribute(props);
+    const newProps = transformPropsToAttributes(props);
 
     return createElement(tagName, {
       ...newProps,

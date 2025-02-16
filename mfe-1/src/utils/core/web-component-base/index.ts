@@ -1,10 +1,12 @@
 import {
   GetComponentPropsParams,
   PropSchema,
-  getComponentProps,
-} from "~/utils";
+  getComponentPropsByAttributes,
+} from "~/utils/secondary";
 
-export class WebComponentBase<Props extends object> extends HTMLElement {
+export class WebComponentBase<
+  Props extends object = object
+> extends HTMLElement {
   public css?: string; //css `.red{background-color: red}`
   public styles?: string[]; // styles[mfe=teste]
   public shadow?: ShadowRoot;
@@ -24,13 +26,18 @@ export class WebComponentBase<Props extends object> extends HTMLElement {
       const attributeName = schema.name as string;
       const value = this.getAttribute(attributeName);
 
+      const defaultValue =
+        schema.type === "string"
+          ? schema.defaultValue
+          : JSON.stringify(schema.defaultValue);
+
       attributes.push({
-        value: value ?? JSON.stringify(schema.defaultValue) ?? "",
+        value: value ?? defaultValue ?? "",
         schema,
       });
     }
 
-    const props = getComponentProps<Props>({
+    const props = getComponentPropsByAttributes<Props>({
       attributes,
     });
 
