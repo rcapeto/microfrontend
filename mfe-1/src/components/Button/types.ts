@@ -4,7 +4,9 @@ export type ButtonProps = {
   text: string;
   icon?: ButtonIcon;
   className?: string;
-  //apenas para testar
+  onPressKey?: string;
+
+  //apenas para testar as propriedades
   arrayString?: string[];
   arrayObj?: Array<{ text: string }>;
   bool?: boolean;

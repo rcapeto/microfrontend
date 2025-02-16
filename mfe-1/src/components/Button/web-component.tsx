@@ -55,6 +55,12 @@ class Component extends WebComponentBase<ButtonProps> {
       type: "object",
       required: false,
     },
+    {
+      name: "onPressKey",
+      type: "string",
+      required: false,
+      defaultValue: "",
+    },
   ];
 
   render() {

@@ -8,6 +8,9 @@ export function Button(props: ButtonProps) {
 
   function handleButtonClick() {
     setClick((prev) => prev + 1);
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (window as any)[props.onPressKey ?? ""]?.();
   }
 
   function getCurrentIcon() {

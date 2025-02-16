@@ -4,6 +4,8 @@ type ButtonProps = {
   text: string;
   icon?: "arrow_left" | "arrow_right";
   className?: string;
+  onPressKey?: string;
+  // testar as propriedades
   arrayString?: string[];
   arrayObj?: Array<{ text: string }>;
   bool?: boolean;
