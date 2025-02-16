@@ -1,6 +1,7 @@
 import { createRoot } from "react-dom/client";
 import css from "~/components/styles.css?inline";
-import { defineWebComponent, PropSchema, WebComponentBase } from "~/utils";
+import { defineWebComponent, WebComponentBase } from "~/utils";
+import { PropSchema } from "~/utils/secondary";
 import { Router } from "./Router";
 import { RouterProps } from "./types";
 

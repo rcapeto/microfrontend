@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
-import { defineWebComponent, PropSchema, WebComponentBase } from "~/utils";
+import { defineWebComponent, WebComponentBase } from "~/utils";
+import { PropSchema } from "~/utils/secondary";
 import { Button } from "./Button";
 import { ButtonProps } from "./types";
 
