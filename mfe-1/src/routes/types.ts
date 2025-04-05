@@ -1,3 +1,3 @@
 export type RouterProps = {
-  baseUrl?: string;
+  baseurl?: string;
 };

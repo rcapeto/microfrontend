@@ -47,8 +47,7 @@ export function Button(props: ButtonProps) {
 
   return (
     <>
-      <style mfe-button-style>{css}</style>
-
+      <style mfe-button-style="">{css}</style>
       <button
         className={`flex items-center gap-2 bg-purple-500 p-2 rounded text-white cursor-pointer hover:bg-purple-700 transition-colors shadow-lg ${
           props.className ?? ""

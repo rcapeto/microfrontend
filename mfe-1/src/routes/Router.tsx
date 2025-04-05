@@ -3,7 +3,7 @@ import { AboutUs, Documentation } from "~/pages";
 import { RouterProps } from "./types";
 
 export function Router(props: RouterProps) {
-  const { baseUrl = "" } = props;
+  const { baseurl = "" } = props;
   console.log(props);
 
   const routes = [
@@ -14,7 +14,7 @@ export function Router(props: RouterProps) {
   console.log(">>> Render MFE Router", { props, routes });
 
   return (
-    <BrowserRouter basename={baseUrl}>
+    <BrowserRouter basename={baseurl}>
       <Routes>
         {routes.map((route, index) => (
           <Route

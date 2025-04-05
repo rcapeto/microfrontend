@@ -11,7 +11,7 @@ class Component extends WebComponentBase<RouterProps> {
   css = css;
   attributesSchema?: PropSchema<RouterProps>[] = [
     {
-      name: "baseUrl",
+      name: "baseurl",
       type: "string",
       required: false,
       defaultValue: "",

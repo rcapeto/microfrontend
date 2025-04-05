@@ -3,7 +3,7 @@ import { Loading } from "~/components/Loading";
 import { loadWebComponent } from "~/utils";
 
 type RouterProps = {
-  baseUrl?: string;
+  baseurl?: string;
 };
 
 const tagName = "mfe-router";

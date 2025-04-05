@@ -7,11 +7,11 @@ const navigation = [
   { text: "Início", link: "" },
   {
     text: "Sobre nós",
-    link: `${mainApplicationConfig.pathname}/${mainApplicationConfig.routes.aboutUs}`,
+    link: `/${mainApplicationConfig.pathname}/${mainApplicationConfig.routes.aboutUs}`,
   },
   {
     text: "Docs",
-    link: `${mainApplicationConfig.pathname}/${mainApplicationConfig.routes.documentation}`,
+    link: `/${mainApplicationConfig.pathname}/${mainApplicationConfig.routes.documentation}`,
   },
   { text: "Componentes", link: "componentes" },
 ];

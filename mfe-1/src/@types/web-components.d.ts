@@ -17,6 +17,11 @@ declare global {
       "mfe-router": WebComponent<{
         baseUrl?: string;
       }>;
+      "mfe-button-test": WebComponent<{
+        theme?: string;
+        camelCase?: string;
+        camelcase?: string;
+      }>;
     }
   }
 }

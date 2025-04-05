@@ -1,6 +1,9 @@
-import "~/routes/web-component";
-import "./index.css";
+import { Button } from "~/components/Button";
 
-export function App() {
-  return <mfe-router />;
+type AppProps = {
+  camelCase: string;
+};
+
+export function App(props: AppProps) {
+  return <Button text={props.camelCase} />;
 }

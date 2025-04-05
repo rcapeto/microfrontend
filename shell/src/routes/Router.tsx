@@ -15,7 +15,7 @@ export function Router() {
         <Route path="componentes" element={<Components />} />
         <Route
           path={`${mainMfePathname}/*`}
-          element={<RouterMfe baseUrl={mainMfePathname} />}
+          element={<RouterMfe baseurl={mainMfePathname} />}
         />
         <Route path="*" element={<Error />} />
       </Routes>
