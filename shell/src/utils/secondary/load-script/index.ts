@@ -31,6 +31,6 @@ export async function loadScript(
       reject(`loadScript: ocorreu um erro ao carregar o script: ${src}`);
     };
 
-    document.body.appendChild(script);
+    document.head.appendChild(script);
   });
 }
