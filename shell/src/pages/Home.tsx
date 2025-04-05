@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { Layout } from "~/components/Layout";
+import { AngularMfe } from "~/components/mfe/Angular";
 import { ButtonMfe } from "~/components/mfe/Button";
 import { routesConfig } from "~/config/routes";
 
@@ -27,6 +28,10 @@ export function Home() {
         </Link>
 
         <ButtonMfe text="Testar o click" onPressKey={onPressKey} />
+      </div>
+
+      <div className="mt-2">
+        <AngularMfe title="Título pelo shell" />
       </div>
     </Layout>
   );
